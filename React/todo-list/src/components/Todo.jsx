@@ -55,7 +55,7 @@ const Todo = (props) => {
                     }
                 }
                 
-                return <div key="i">
+                return <div key={i}>
                     <p><span style={{textDecoration:line()}}>{item.text}</span> <input onChange={(e)=>handleToggle(e,i)} type="checkbox" unchecked/> <input type="button" onClick = {(e)=>deleteTask(e,i)} value="Delete" /></p> 
                 </div>
                 
