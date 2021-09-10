@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router';
 
@@ -15,14 +15,14 @@ const Apidisplay = (props) => {
     },[item, id])
 
     const info = ()=>{
-        if(hasError){
+        if(hasError) {
             return (
-            <>
-            <h1>These aren't the droids you're looking for</h1>
-            <img style={{width:"200px"}} src="https://cdn.mos.cms.futurecdn.net/hrxPKa5MUbRixfxM3UQ9Fo.jpg" alt="Obi-Wan Kenobi"/>
-            </>
+                <>
+                <h1>These aren't the droids you're looking for</h1>
+                <img style={{width:"200px"}} src="https://cdn.mos.cms.futurecdn.net/hrxPKa5MUbRixfxM3UQ9Fo.jpg" alt="Obi-Wan Kenobi"/>
+                </>
             )
-        }else if (item === 'planets') {
+        } else if (item === 'planets') {
             return (
                 <div>
                     <h1>{responseData.name}</h1>
@@ -32,7 +32,7 @@ const Apidisplay = (props) => {
                     <b>Population:</b> {responseData.population}
                 </div>
             )
-        } else {
+        } else if (item === 'people') {
             return (
                 <div>
                     <h1>{responseData.name}</h1>
@@ -41,6 +41,13 @@ const Apidisplay = (props) => {
                     <b>Hair Color:</b> {responseData.hair_color}<br/>
                     <b>Skin Color:</b> {responseData.skin_color}
                 </div>
+            )
+        } else {
+            return (
+                <>
+                <h1>These aren't the droids you're looking for</h1>
+                <img style={{width:"200px"}} src="https://cdn.mos.cms.futurecdn.net/hrxPKa5MUbRixfxM3UQ9Fo.jpg" alt="Obi-Wan Kenobi"/>
+                </>
             )
         }
 
