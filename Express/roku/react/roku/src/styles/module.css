@@ -1,0 +1,50 @@
+body{
+    background-color: #704fa0;
+}
+
+.container{
+    width:960px;
+    margin:0px auto;
+}
+
+nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items:center;
+    color:white;
+    padding:0px 15px;
+}
+
+nav a {
+    color:white;
+    text-decoration: none;
+}
+
+.menu {
+    width:30%;
+}
+
+.menu a {
+    color:white; 
+    text-decoration: none; 
+    display:block;
+    width:100%;
+    margin:0px auto;
+    padding:5px;
+    text-align: left;
+}
+
+.menu .active {
+    background-color:#3c8eb4;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin:5px auto;
+    padding:0;
+    width:90%;
+}
+
+.main-nav-active{
+    background-color:#3c8eb4;
+}

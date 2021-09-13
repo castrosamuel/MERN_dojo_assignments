@@ -28,18 +28,18 @@ class Company{
 
 app.get("/api/users/new",(req, res)=>{
     let newUser = new User();
-    res.json({data:newUser})
+    res.json({status:"ok",data:newUser})
 })
 
 app.get("/api/company/new",(req, res)=>{
     let newCompany = new Company();
-    res.json({data:newCompany})
+    res.json({status:"ok",data:newCompany})
 })
 
 app.get("/api/user/company/",(req, res)=>{
     let newUser = new User();
     let newCompany = new Company();
-    res.json({data:{company:newCompany, user:newUser}})
+    res.json({status:"ok",data:{company:newCompany, user:newUser}})
 })
 
 
