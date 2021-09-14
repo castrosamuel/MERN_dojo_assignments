@@ -2,8 +2,11 @@ import './App.css';
 import DisplayAll from './components/DisplayAll'
 import DisplayOne from './components/DisplayOne';
 import Form from './components/Form';
+import EditForm from './components/EditForm';
 import {BrowserRouter,Link, Switch, Route} from "react-router-dom";
+
 function App() {
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -18,6 +21,9 @@ function App() {
         </Route>
         <Route path="/product/:id">
           <DisplayOne/>
+        </Route>
+        <Route path="/:id/edit">
+          <EditForm/>
         </Route>
       </Switch>
       </div>
