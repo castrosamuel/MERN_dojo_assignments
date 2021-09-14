@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {BrowserRouter,Link, Switch, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const DisplayAll = () => {
     const [listOfProducts, setListOfProducts] = useState([]);
@@ -13,7 +13,7 @@ const DisplayAll = () => {
     },[]);
 
     const removeFromDom = id => {
-        setListOfProducts(listOfProducts.filter(product => product._id != id));
+        setListOfProducts(listOfProducts.filter(product => product._id !== id));
     }
 
     const deleteProduct = (id) => {

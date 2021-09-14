@@ -4,18 +4,16 @@ import axios from "axios";
 
 const EditForm = () => {
     const { id } = useParams();
-    const [product, setProduct] = useState([]);
     const [formInfo, setFormInfo]= useState([]);
 
     useEffect(()=>{
-        axios.get(`http://localhost:8000/api/product/${id}`)
+        axios.get("http://localhost:8000/api/product/"+id)
             .then(res=>{
-                // setProduct(res.data.results);
                 setFormInfo(
                     {
-                        "title":res.data.results.title,
-                        "price":res.data.results.price,
-                        "description":res.data.results.description
+                        title:res.data.results.title,
+                        price:res.data.results.price,
+                        description:res.data.results.description
                     })
             })
             .catch(err => console.error(err));

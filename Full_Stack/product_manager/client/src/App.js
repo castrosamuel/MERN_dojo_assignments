@@ -3,7 +3,7 @@ import DisplayAll from './components/DisplayAll'
 import DisplayOne from './components/DisplayOne';
 import Form from './components/Form';
 import EditForm from './components/EditForm';
-import {BrowserRouter,Link, Switch, Route} from "react-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 function App() {
 
