@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {Link} from "react-router-dom";
 
-const DisplayAll = () => {
+const DisplayAll = (props) => {
     const [listOfProducts, setListOfProducts] = useState([]);
     useEffect(()=>{
         axios.get('http://localhost:8000/api/products')
@@ -10,7 +10,7 @@ const DisplayAll = () => {
                 setListOfProducts(res.data.results);
             })
             .catch(err => console.error(err));
-    },[]);
+    },[props.submitted]);
 
     const removeFromDom = id => {
         setListOfProducts(listOfProducts.filter(product => product._id !== id));

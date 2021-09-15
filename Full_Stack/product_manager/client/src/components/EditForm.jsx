@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from "react-router";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const EditForm = () => {
     const { id } = useParams();
     const [formInfo, setFormInfo]= useState([]);
-
+    const history = useHistory();
     useEffect(()=>{
         axios.get("http://localhost:8000/api/product/"+id)
             .then(res=>{
@@ -26,6 +27,7 @@ const EditForm = () => {
         axios.put('http://localhost:8000/api/update/product/' + id, formInfo)
             .then(res => console.log(res))
             .catch(err => console.log(err));
+        history.push("/")
     }
 
     const changeHandler = e=>{
@@ -48,7 +50,7 @@ const EditForm = () => {
                     <label>Description</label>
                     <input type="text" name="description" onChange={(e)=>changeHandler(e)} value={formInfo.description}></input>
                 </div>
-                <button type="submit">Create</button>
+                <button type="submit">Update</button>
             </form>
         </div>
     );
