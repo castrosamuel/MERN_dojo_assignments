@@ -15,8 +15,6 @@ const Form = (props) => {
         setFormInfo({...formInfo,[e.target.name]:e.target.value})
     }
 
-    
-
     const onSubmit= e =>{
         e.preventDefault();
         console.log('Form has been submited', formInfo)

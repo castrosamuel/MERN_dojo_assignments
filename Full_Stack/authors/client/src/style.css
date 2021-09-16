@@ -1,0 +1,19 @@
+.container {
+    width:950px;
+    margin:0px auto;
+}
+.authorsTable {
+    width:600px;
+    margin:0px auto;
+    text-align:left;
+}
+.authorsTable th {
+    background-color:black;
+    color:white;
+    padding:2%;
+}
+
+.authorsTable td {
+    border:1px solid gray;
+    padding:1%;
+}
